@@ -38,6 +38,13 @@ nav a {
   font-weight: 500;
 }
 
+#menu-icon{
+    font-size:1.6rem;
+    color:white;
+    cursor:pointer;
+    display:none;
+}
+
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -207,6 +214,30 @@ footer {
     padding: 15px;
     display: block;
   }
+
+   #menu-icon{
+        display:block;
+    }
+    #navMenu{
+        position:absolute;
+        top:100%;
+        right:-100%;
+        width:255px;
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        background:var(--main-color);
+        transition:all 0.5s ease;
+       backdrop-filter:blur(10px);
+    }
+    #navMenu a{
+        display:block;
+        padding:17px;
+        font-size:22px;
+    }
+    #navMenu.active{
+        right:0;
+    }
 
   .menu-toggle {
     display: block;
